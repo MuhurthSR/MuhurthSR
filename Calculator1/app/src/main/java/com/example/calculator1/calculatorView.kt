@@ -47,12 +47,14 @@ fun CalculatorView(viewModel: CalculatorViewModel){
             ,
             verticalArrangement = Arrangement.SpaceBetween
         ){
-            Spacer(modifier = Modifier.height(40.dp))
+            
             Text(text = viewModel.display.value, modifier = Modifier
                 .background(Color.Black)
                 .fillMaxWidth()
                 .fillMaxHeight(0.2f),
                 color = Color.White,
+                maxLines = 2,
+                minLines = 2,
                 textAlign = TextAlign.End,
                 fontSize = 40.sp
                 )
@@ -61,6 +63,8 @@ fun CalculatorView(viewModel: CalculatorViewModel){
                 .fillMaxWidth()
                 .fillMaxHeight(0.2f),
                 color = Color.White,
+                maxLines = 2,
+                minLines = 2,
                 textAlign = TextAlign.End,
                 fontSize = 25.sp
             )
