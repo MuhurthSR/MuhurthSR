@@ -36,7 +36,7 @@ fun CalculatorView(viewModel: CalculatorViewModel){
             .background(color = Color(0, 0, 0))
         ,
 
-            contentAlignment = Alignment.BottomCenter
+        contentAlignment = Alignment.BottomCenter
     ){
 
 
@@ -47,7 +47,8 @@ fun CalculatorView(viewModel: CalculatorViewModel){
             ,
             verticalArrangement = Arrangement.SpaceBetween
         ){
-            Text(text = viewModel.input.value, modifier = Modifier
+            Spacer(modifier = Modifier.height(40.dp))
+            Text(text = viewModel.display.value, modifier = Modifier
                 .background(Color.Black)
                 .fillMaxWidth()
                 .fillMaxHeight(0.2f),
@@ -150,7 +151,7 @@ fun CalculatorView(viewModel: CalculatorViewModel){
                     Text(text = "9", fontSize = 24.sp)
                 }
                 Button(
-                    onClick = { viewModel.onCLick("*") },
+                    onClick = { viewModel.onClickMuitiply() },
                     Modifier.size(70.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = Color(0,186,185))
